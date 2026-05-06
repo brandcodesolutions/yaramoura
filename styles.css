@@ -1,0 +1,253 @@
+@font-face {
+  font-family: 'Kenao Sans Serif';
+  src: url('fonts/GlacialIndifference-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('fonts/KenaoSansSerif.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #004038, #00abbb);
+  background-attachment: fixed;
+  font-family: 'Glacial Indifference', sans-serif;
+  color: #fff;
+}
+
+/* ── Overlay branco inicial ──────────────────────── */
+#bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 0;
+  transition: opacity 1.8s ease;
+  pointer-events: none;
+}
+
+/* ── Site principal ─────────────────────────────── */
+.site {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: transparent;
+}
+
+/* ── Animações de reveal ─────────────────────────── */
+.reveal-section {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.reveal-section.visible {
+  opacity: 1;
+}
+
+/* ── Banner ──────────────────────────────────────── */
+.banner {
+  width: 100%;
+  position: relative;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to right, #004038, #00abbb);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+  mask-image: linear-gradient(to bottom, transparent, black);
+  pointer-events: none;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Seção genérica ─────────────────────────────── */
+.section {
+  width: 100%;
+  padding: 56px 24px;
+}
+
+.section-content {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-content h2 {
+  font-family: 'Kenao Sans Serif', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  color: #fff;
+  -webkit-text-stroke: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+.section-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition: background 0.25s;
+}
+
+.btn:active {
+  background: #333;
+}
+
+/* ── Seção 1 ─────────────────────────────────────── */
+.section1 {
+  background: transparent;
+  padding-bottom: 16px;
+}
+
+/* ── Seção 2 / Cards ─────────────────────────────── */
+.section2 {
+  background: transparent;
+  padding-top: 16px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  font-family: 'Kenao Sans Serif', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  background: linear-gradient(to right, #004038, #00abbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+.card p {
+  font-size: 0.9rem;
+  background: linear-gradient(to right, #004038, #00abbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+.footer {
+  background: #fff;
+  padding: 48px 24px 36px;
+}
+
+.footer-content {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-name {
+  font-family: 'Kenao Sans Serif', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: linear-gradient(to right, #004038, #00abbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.footer-links a {
+  background: linear-gradient(to right, #004038, #00abbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #004038;
+  transition: opacity 0.2s;
+}
+
+.footer-links a svg {
+  color: #004038;
+  stroke: #004038;
+  fill: #004038;
+}
+
+.footer-links a:active {
+  opacity: 0.7;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  background: linear-gradient(to right, #004038, #00abbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.02em;
+}
+
+/* ── Desktop: mantém layout mobile centralizado ─── */
+@media (min-width: 480px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .site {
+    max-width: 480px;
+  }
+}

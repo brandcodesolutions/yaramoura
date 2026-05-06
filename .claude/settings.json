@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \"c:/Users/Home/Desktop/yaramouraminisite/images/abertura.mp4\")",
+      "PowerShell(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \"c:\\\\Users\\\\Home\\\\Desktop\\\\yaramouraminisite\\\\images\\\\abertura.mp4\")"
+    ]
+  }
+}
